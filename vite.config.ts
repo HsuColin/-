@@ -9,7 +9,7 @@ export default defineConfig(({mode}) => {
     base: './', // 確保在 GitHub Pages 的子路徑下也能正確讀取檔案
     plugins: [react(), tailwindcss()],
     define: {
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY || ''),
     },
     resolve: {
       alias: {
